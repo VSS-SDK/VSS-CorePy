@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='VSS-CorePy',
+    name='vss_corepy',
     version='0.1',
     packages=['src',],
     license='GPL3',
