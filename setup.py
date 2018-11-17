@@ -6,5 +6,5 @@ setup(
     packages=['vsscorepy',],
     license='GPL3',
     url='https://vss-sdk.github.io/',
-    author_email='johnathanfercher22@gmail.com'
+    author_email='johnathanfercher22@gmail.com',
 )

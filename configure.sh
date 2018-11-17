@@ -15,7 +15,8 @@ GENERATE_PROTOS() {
 
     mkdir -p src/protos
 
-    mv protos/*_pb2.py src/protos
+    mv protos/*_pb2.py vsscorepy/protos
 }
 
 GENERATE_PROTOS;
+sudo python3 setup.py install
