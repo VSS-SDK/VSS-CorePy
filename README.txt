@@ -1,1 +1,0 @@
-# VSS-CorePy
