@@ -66,4 +66,5 @@ if __name__ == '__main__':
         url='https://vss-sdk.github.io/',
         author_email='johnathanfercher22@gmail.com',
         keywords=["IEEE", "VSS", "Robot Soccer", "VSS-SDK"],
+        tests_require=["pytest",]
     )
