@@ -21,12 +21,12 @@ else:
     protoc = find_executable("protoc")
 
 def generate_state():
-    protoc_command = [ protoc, "-I/src/protos", "-I.", "--python_out=.", "protos/state.proto" ]
+    protoc_command = [ protoc, "-I/vsscorepy/protos", "-I.", "--python_out=.", "protos/state.proto" ]
 
     if subprocess.call(protoc_command) != 0:
         sys.exit(-1)
 
-    shutil.move("protos/state_pb2.py", "src/protos/state_pb2.py")
+    shutil.move("protos/state_pb2.py", "vsscorepy/protos/state_pb2.py")
 
 def generate_command():
     protoc_command = [ protoc, "-I/src/protos", "-I.", "--python_out=.", "protos/command.proto" ]
@@ -34,23 +34,23 @@ def generate_command():
     if subprocess.call(protoc_command) != 0:
         sys.exit(-1)
 
-    shutil.move("protos/command_pb2.py", "src/protos/command_pb2.py")
+    shutil.move("protos/command_pb2.py", "vsscorepy/protos/command_pb2.py")
 
 def generate_debug():
-    protoc_command = [ protoc, "-I/src/protos", "-I.", "--python_out=.", "protos/debug.proto" ]
+    protoc_command = [ protoc, "-I/vsscorepy/protos", "-I.", "--python_out=.", "protos/debug.proto" ]
     
     if subprocess.call(protoc_command) != 0:
         sys.exit(-1)
 
-    shutil.move("protos/debug_pb2.py", "src/protos/debug_pb2.py")
+    shutil.move("protos/debug_pb2.py", "vsscorepy/protos/debug_pb2.py")
 
 def generate_control():
-    protoc_command = [ protoc, "-I/src/protos", "-I.", "--python_out=.", "protos/control.proto" ]
+    protoc_command = [ protoc, "-I/vsscorepy/protos", "-I.", "--python_out=.", "protos/control.proto" ]
     
     if subprocess.call(protoc_command) != 0:
         sys.exit(-1)
 
-    shutil.move("protos/control_pb2.py", "src/protos/control_pb2.py")
+    shutil.move("protos/control_pb2.py", "vsscorepy/protos/control_pb2.py")
 
 if __name__ == '__main__':
     generate_state()
