@@ -3,6 +3,6 @@
 INSTALL_UBUNTU_16_10 () {
     apt-get -y install pkgconf
     apt-get -y install g++ cmake libzmq5 libzmq3-dev protobuf-compiler libprotobuf-dev libboost-all-dev
-    apt-get -y install python3
+    apt-get -y install python3 pip3
     INSTALLED=1
 }
