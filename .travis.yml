@@ -7,9 +7,9 @@ services:
 
 script:
   - sudo docker build -f Dockerfile.ubuntu16 -t vss-core-py-ubuntu16 .
-  - sudo docker run vss-core-py-ubuntu16 test
+  - sudo docker run vss-core-py-ubuntu16
   - sudo docker build -f Dockerfile.ubuntu18 -t vss-core-py-ubuntu18 .
-  - sudo docker run vss-core-py-ubuntu18 test
+  - sudo docker run vss-core-py-ubuntu18
 
 notifications:
   slack: vss-sdk:4997yzfLGxiYiN2GFchBJ83k

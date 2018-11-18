@@ -11,7 +11,7 @@ WORKDIR /vss-core-py-ubuntu18
 RUN chmod +x /vss-core-py-ubuntu18/configure.sh
 
 # Executa a instalação na criação dos containers
-RUN /vss-core-py-ubuntu18/configure.sh development
+RUN /vss-core-py-ubuntu18/configure.sh
 
 # Script executado no docker run
 CMD pytest
