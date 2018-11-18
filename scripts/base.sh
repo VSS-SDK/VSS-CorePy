@@ -11,7 +11,7 @@ INSTALL_BASE() {
 }
 
 INSTALL_PYTHON_DEPENDENCIES() {
-    sudo -H pip3 install pytest
-    sudo -H pip3 install zmq
-    sudo -H pip3 install git+https://github.com/VSS-SDK/VSS-CorePy 
+    pip3 install pytest
+    pip3 install zmq
+    pip3 install git+https://github.com/VSS-SDK/VSS-CorePy 
 }
