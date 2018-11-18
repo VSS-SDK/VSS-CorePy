@@ -13,7 +13,7 @@ GENERATE_PROTOS() {
     protoc -I=. --python_out=. protos/debug.proto
     protoc -I=. --python_out=. protos/control.proto
 
-    mkdir -p src/protos
+    mkdir -p vsscorepy/protos
 
     mv protos/*_pb2.py vsscorepy/protos
 }
