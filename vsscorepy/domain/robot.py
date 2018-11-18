@@ -1,4 +1,4 @@
-from domain.pose import Pose
+from vsscorepy.domain.pose import Pose
 
 class Robot(Pose):
     speed_x = 0.0

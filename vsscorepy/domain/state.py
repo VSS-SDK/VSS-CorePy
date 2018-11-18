@@ -1,4 +1,4 @@
-from domain.ball import Ball
+from vsscorepy.domain.ball import Ball
 
 class State():
     ball = Ball()

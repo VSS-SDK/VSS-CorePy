@@ -1,7 +1,7 @@
-from domain.state import State
-from domain.ball import Ball
-from domain.robot import Robot
-from protos.state_pb2 import Global_State
+from vsscorepy.domain.state import State
+from vsscorepy.domain.ball import Ball
+from vsscorepy.domain.robot import Robot
+from vsscorepy.protos.state_pb2 import Global_State
 
 class StateMapper():
     @classmethod

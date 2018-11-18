@@ -1,7 +1,7 @@
-from domain.command import Command
-from domain.wheels_command import WheelsCommand
-from protos.command_pb2 import Global_Commands
-from protos.command_pb2 import Robot_Command
+from vsscorepy.domain.command import Command
+from vsscorepy.domain.wheels_command import WheelsCommand
+from vsscorepy.protos.command_pb2 import Global_Commands
+from vsscorepy.protos.command_pb2 import Robot_Command
 
 class CommandMapper():
     @classmethod

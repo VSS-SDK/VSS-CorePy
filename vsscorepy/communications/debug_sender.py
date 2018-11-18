@@ -1,9 +1,9 @@
 import zmq
 import google.protobuf.text_format
 
-from protos.debug_pb2 import Global_Debug
-from domain.debug import Debug
-from helpers.debug_mapper import DebugMapper
+from vsscorepy.protos.debug_pb2 import Global_Debug
+from vsscorepy.domain.debug import Debug
+from vsscorepy.helpers.debug_mapper import DebugMapper
 
 class DebugSender():
     context = None

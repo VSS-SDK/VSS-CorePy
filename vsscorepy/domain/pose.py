@@ -1,4 +1,4 @@
-from domain.point import Point
+from vsscorepy.domain.point import Point
 
 class Pose(Point):
     angle = 0.0

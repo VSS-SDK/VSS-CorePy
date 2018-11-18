@@ -1,4 +1,4 @@
-from domain.point import Point
+from vsscorepy.domain.point import Point
 
 class Ball(Point):
     speed_x = 0.0

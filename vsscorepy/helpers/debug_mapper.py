@@ -1,7 +1,7 @@
-from domain.debug import Debug
-from domain.point import Point
-from protos.debug_pb2 import Global_Debug
-from protos.debug_pb2 import Pose
+from vsscorepy.domain.debug import Debug
+from vsscorepy.domain.point import Point
+from vsscorepy.protos.debug_pb2 import Global_Debug
+from vsscorepy.protos.debug_pb2 import Pose
 
 class DebugMapper():
     @classmethod

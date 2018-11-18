@@ -1,9 +1,9 @@
 import zmq
 import google.protobuf.text_format
 
-from protos.command_pb2 import Global_Commands
-from domain.command import Command
-from helpers.command_mapper import CommandMapper
+from vsscorepy.protos.command_pb2 import Global_Commands
+from vsscorepy.domain.command import Command
+from vsscorepy.helpers.command_mapper import CommandMapper
 
 class CommandSender():
     context = None
