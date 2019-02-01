@@ -25,3 +25,20 @@ def test_filled_constructor_should_create_valid_object():
     assert point is not None
     assert point.x == random.x
     assert point.y == random.y
+
+
+def test_eq_should_be_true_if_all_parameters_are_equal():
+    point1 = Point.random()
+    point2 = Point(x=point1.x, y=point1.y)
+
+    assert point1 == point2
+
+    point2.x = point2.x + 1
+
+    assert point1 != point2
+
+    point2.x = point2.x - 1
+    point2.y = point2.y + 1
+
+    assert point1 != point2
+

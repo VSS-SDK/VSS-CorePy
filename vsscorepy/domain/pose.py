@@ -17,3 +17,9 @@ class Pose(Point):
         angle = float(randint(0, 10))
 
         return cls(x=x, y=y, angle=angle)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y and self.angle == other.angle
+
+    def __ne__(self, other):
+        return not self.__eq__(other)

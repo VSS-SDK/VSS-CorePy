@@ -28,3 +28,24 @@ def test_filled_constructor_should_create_valid_object():
     assert pose.x == random.x
     assert pose.y == random.y
     assert pose.angle == random.angle
+
+
+def test_eq_should_be_true_if_all_parameters_are_equal():
+    pose1 = Pose.random()
+    pose2 = Pose(x=pose1.x, y=pose1.y, angle=pose1.angle)
+
+    assert pose1 == pose2
+
+    pose2.x = pose2.x + 1
+
+    assert pose1 != pose2
+
+    pose2.x = pose2.x - 1
+    pose2.y = pose2.y + 1
+
+    assert pose1 != pose2
+
+    pose2.y = pose2.y - 1
+    pose2.angle = pose2.angle + 1
+
+    assert pose1 != pose2

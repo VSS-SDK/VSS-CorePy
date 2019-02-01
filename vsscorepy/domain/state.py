@@ -1,4 +1,7 @@
+from random import randint
+
 from vsscorepy.domain.ball import Ball
+from vsscorepy.domain.robot import Robot
 
 
 class State(object):
@@ -6,7 +9,7 @@ class State(object):
     team_blue = None
     team_yellow = None
 
-    def __init__(self, ball: Ball = None, team_blue: list = None, team_yellow: list = None):
+    def __init__(self, ball: Ball = Ball(), team_blue: list = list(), team_yellow: list = list()):
         self.ball = ball
         self.team_blue = team_blue
         self.team_yellow = team_yellow
@@ -15,3 +18,14 @@ class State(object):
         self.ball = Ball()
         self.team_blue = list()
         self.team_yellow = list()
+
+    @classmethod
+    def random(cls):
+        ball = Ball.random()
+        qtd_yellow = randint(1, 10)
+        qtd_blue = randint(1, 10)
+
+        team_yellow = [Robot.random() for i in range(0, qtd_yellow)]
+        team_blue = [Robot.random() for i in range(0, qtd_blue)]
+
+        return cls(ball=ball, team_blue=team_blue, team_yellow=team_yellow)

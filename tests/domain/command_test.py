@@ -25,3 +25,12 @@ def test_filled_constructor_should_create_valid_object():
     assert command is not None
     assert command.wheels_commands is not None
     assert len(command.wheels_commands) == len(random.wheels_commands)
+
+
+def test_clean_should_empty_wheels_commands():
+    command = Command.random()
+    command.clean()
+
+    assert command is not None
+    assert command.wheels_commands is not None
+    assert len(command.wheels_commands) == 0

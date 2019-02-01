@@ -20,3 +20,9 @@ class Ball(Point):
         speed_y = float(randint(0, 10))
 
         return cls(x=x, y=y, speed_x=speed_x, speed_y=speed_y)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y and self.speed_x == other.speed_x and self.speed_y == other.speed_y
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
