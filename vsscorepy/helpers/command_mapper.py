@@ -9,7 +9,7 @@ class CommandMapper():
         global_commands = Global_Commands()
 
         for i in range(0, 3):
-            robot_command = self.__get_robot_command(command.commands[i])
+            robot_command = self.__get_robot_command(command.wheels_commands[i])
 
             global_commands.robot_commands.add()  
             global_commands.robot_commands[i].left_vel = robot_command.left_vel
