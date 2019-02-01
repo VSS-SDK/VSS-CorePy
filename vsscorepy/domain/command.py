@@ -1,8 +1,21 @@
-class Command:
-    commands = None
+from random import randint
 
-    def __init__(self, commands: list = None):
-        self.commands = commands
+from vsscorepy.domain.wheels_command import WheelsCommand
+
+
+class Command:
+    wheels_commands = None
+
+    def __init__(self, wheels_commands: list = list()):
+        self.wheels_commands = wheels_commands
 
     def clean(self):
-        self.commands = list()
+        self.wheels_commands = list()
+
+    @classmethod
+    def random(cls):
+        qtd = randint(1, 10)
+
+        wheels_commands = [WheelsCommand.random() for i in range(0, qtd)]
+
+        return cls(wheels_commands=wheels_commands)
