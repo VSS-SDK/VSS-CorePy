@@ -4,7 +4,7 @@ from vsscorepy.domain.point import Point
 
 
 class Pose(Point):
-    angle = 0.0
+    angle = None
 
     def __init__(self, x: float = 0.0, y: float = 0.0, angle: float = 0.0):
         super().__init__(x, y)

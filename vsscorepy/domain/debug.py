@@ -1,9 +1,9 @@
-class Debug():
-    step_points = list()
-    final_poses = list()
-    paths = list()
+class Debug(object):
+    step_points = None
+    final_poses = None
+    paths = None
 
-    def __init__(self, step_points=list(), final_poses=list(), paths=list()):
+    def __init__(self, step_points: list = None, final_poses: list = None, paths: list = None):
         self.step_points = step_points
         self.final_poses = final_poses
         self.paths = paths

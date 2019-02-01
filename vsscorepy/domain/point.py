@@ -1,9 +1,9 @@
 from random import randint
 
 
-class Point:
-    x = 0.0
-    y = 0.0 
+class Point(object):
+    x = None
+    y = None
 
     def __init__(self, x: float = 0.0, y: float = 0.0):
         self.x = x

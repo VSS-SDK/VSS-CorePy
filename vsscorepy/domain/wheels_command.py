@@ -1,7 +1,17 @@
-class WheelsCommand():
-    left_vel = 0.0
-    right_vel = 0.0
+from random import randint
 
-    def __init__(self, left_vel, right_vel):
+
+class WheelsCommand(object):
+    left_vel = None
+    right_vel = None
+
+    def __init__(self, left_vel: float = 0.0, right_vel: float = 0.0):
         self.left_vel = left_vel
         self.right_vel = right_vel
+
+    @classmethod
+    def random(cls):
+        left_vel = float(randint(0, 10))
+        right_vel = float(randint(0, 10))
+
+        return cls(left_vel=left_vel, right_vel=right_vel)

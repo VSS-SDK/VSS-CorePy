@@ -4,8 +4,8 @@ from vsscorepy.domain.point import Point
 
 
 class Ball(Point):
-    speed_x = 0.0
-    speed_y = 0.0
+    speed_x = None
+    speed_y = None
 
     def __init__(self, x: float = 0.0, y: float = 0.0, speed_x: float = 0.0, speed_y: float = 0.0):
         super().__init__(x, y)
