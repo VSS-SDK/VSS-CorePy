@@ -24,10 +24,36 @@ def test_default_constructor_should_create_zero_object():
 def test_filled_constructor_should_create_valid_object():
     random = Ball.random()
 
-    point = Ball(x=random.x, y=random.y, speed_x=random.speed_x, speed_y=random.speed_y)
+    ball = Ball(x=random.x, y=random.y, speed_x=random.speed_x, speed_y=random.speed_y)
 
-    assert point is not None
-    assert point.x == random.x
-    assert point.y == random.y
-    assert point.speed_x == random.speed_x
-    assert point.speed_y == random.speed_y
+    assert ball is not None
+    assert ball.x == random.x
+    assert ball.y == random.y
+    assert ball.speed_x == random.speed_x
+    assert ball.speed_y == random.speed_y
+
+
+def test_eq_should_be_true_if_all_parameters_are_equal():
+    ball1 = Ball.random()
+    ball2 = Ball(x=ball1.x, y=ball1.y, speed_x=ball1.speed_x, speed_y=ball1.speed_y)
+
+    assert ball1 == ball2
+
+    ball2.x = ball2.x + 1
+
+    assert ball1 != ball2
+
+    ball2.x = ball2.x - 1
+    ball2.y = ball2.y + 1
+
+    assert ball1 != ball2
+
+    ball2.y = ball2.y - 1
+    ball2.speed_x = ball2.speed_x + 1
+
+    assert ball1 != ball2
+
+    ball2.speed_x = ball2.speed_x - 1
+    ball2.speed_y = ball2.speed_y + 1
+
+    assert ball1 != ball2
