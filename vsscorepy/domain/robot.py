@@ -26,3 +26,10 @@ class Robot(Pose):
         speed_angle = float(randint(0, 10))
 
         return cls(x=x, y=y, angle=angle, speed_x=speed_x, speed_y=speed_y, speed_angle=speed_angle)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y and self.angle == other.angle and self.speed_x == other.speed_x \
+               and self.speed_y == other.speed_y and self.speed_angle == other.speed_angle
+
+    def __ne__(self, other):
+        return not self.__eq__(other)

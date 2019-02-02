@@ -15,3 +15,9 @@ class WheelsCommand(object):
         right_vel = float(randint(0, 10))
 
         return cls(left_vel=left_vel, right_vel=right_vel)
+
+    def __eq__(self, other):
+        return self.left_vel == other.left_vel and self.right_vel == other.right_vel
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
