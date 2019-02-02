@@ -35,7 +35,7 @@ def test_filled_constructor_should_create_valid_object():
         assert zip_wheels_command[0] == zip_wheels_command[1]
 
 
-def test_clean_should_empty_wheels_commands():
+def test_clean_should_works_properly():
     command = Command.random()
     command.clean()
 

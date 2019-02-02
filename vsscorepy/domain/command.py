@@ -14,8 +14,8 @@ class Command:
 
     @classmethod
     def random(cls):
-        qtd = randint(1, 10)
+        qtd = randint(2, 10)
 
-        wheels_commands = [WheelsCommand.random() for i in range(0, qtd)]
+        wheels_commands = [WheelsCommand.random() for i in range(1, qtd)]
 
         return cls(wheels_commands=wheels_commands)

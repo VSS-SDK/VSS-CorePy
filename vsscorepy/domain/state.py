@@ -22,10 +22,10 @@ class State(object):
     @classmethod
     def random(cls):
         ball = Ball.random()
-        qtd_yellow = randint(1, 10)
-        qtd_blue = randint(1, 10)
+        qtd_yellow = randint(2, 10)
+        qtd_blue = randint(2, 10)
 
-        team_yellow = [Robot.random() for i in range(0, qtd_yellow)]
-        team_blue = [Robot.random() for i in range(0, qtd_blue)]
+        team_yellow = [Robot.random() for i in range(1, qtd_yellow)]
+        team_blue = [Robot.random() for i in range(1, qtd_blue)]
 
         return cls(ball=ball, team_blue=team_blue, team_yellow=team_yellow)
