@@ -2,8 +2,6 @@ from random import randint
 
 
 class WheelsCommand(object):
-    left_vel = None
-    right_vel = None
 
     def __init__(self, left_vel: float = 0.0, right_vel: float = 0.0):
         self.left_vel = left_vel

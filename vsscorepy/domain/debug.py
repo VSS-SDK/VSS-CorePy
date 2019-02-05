@@ -6,9 +6,6 @@ from vsscorepy.domain.pose import Pose
 
 
 class Debug(object):
-    step_points = None
-    final_poses = None
-    paths = None
 
     def __init__(self, step_points: list = list(), final_poses: list = list(), paths: list = list()):
         self.step_points = step_points

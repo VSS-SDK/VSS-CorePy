@@ -4,7 +4,6 @@ from vsscorepy.domain.point import Point
 
 
 class Path(object):
-    points = None
 
     def __init__(self, points: list = list()):
         self.points = points

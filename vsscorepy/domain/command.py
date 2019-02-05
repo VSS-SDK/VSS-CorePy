@@ -4,7 +4,6 @@ from vsscorepy.domain.wheels_command import WheelsCommand
 
 
 class Command:
-    wheels_commands = None
 
     def __init__(self, wheels_commands: list = list()):
         self.wheels_commands = wheels_commands

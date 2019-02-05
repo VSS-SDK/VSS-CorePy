@@ -5,9 +5,6 @@ from vsscorepy.domain.robot import Robot
 
 
 class State(object):
-    ball = None
-    team_blue = None
-    team_yellow = None
 
     def __init__(self, ball: Ball = Ball(), team_blue: list = list(), team_yellow: list = list()):
         self.ball = ball

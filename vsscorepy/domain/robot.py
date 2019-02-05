@@ -4,9 +4,6 @@ from vsscorepy.domain.pose import Pose
 
 
 class Robot(Pose):
-    speed_x = None
-    speed_y = None
-    speed_angle = None
 
     def __init__(self, x: float = 0.0, y: float = 0.0, angle: float = 0.0, speed_x: float = 0.0, speed_y: float = 0.0,
                  speed_angle: float = 0.0):

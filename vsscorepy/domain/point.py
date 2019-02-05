@@ -2,8 +2,6 @@ from random import randint
 
 
 class Point(object):
-    x = None
-    y = None
 
     def __init__(self, x: float = 0.0, y: float = 0.0):
         self.x = x
